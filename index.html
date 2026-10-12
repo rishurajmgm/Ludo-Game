@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludo Royale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo"><span class="crown">👑</span>
+    <div class="word"><b style="--c:#ff3b3b">L</b><b style="--c:#ffc400">U</b><b style="--c:#2fd27a">D</b><b style="--c:#3b8bff">O</b></div>
+    <span class="rb">ROYALE</span></div>
+  <p class="tag">Roll · Move · Capture · Win</p>
+  <button id="gear" class="icon" aria-label="Settings">⚙</button>
+  <div id="settings" class="settings">
+    <label>Players <select id="count"><option>2</option><option>3</option><option selected>4</option></select></label>
+    <label class="chk"><input type="checkbox" id="cpu"> Computer plays other colors</label>
+  </div>
+  <button id="newBtn" class="newbtn">⟳ New Game</button>
+</header>
+<div class="layout">
+  <nav class="side">
+    <a class="act" href="#">🏠<span>Home</span></a>
+    <a href="#players">📊<span>Score</span></a>
+    <label class="snd">🔊<span>Sound</span><input type="checkbox" id="snd" class="tg" checked></label>
+  </nav>
+  <main class="stage">
+    <div id="board" aria-label="Ludo board"></div>
+    <section class="how">
+      <div><h2>🏆 How to Play</h2>
+        <ol><li>Roll a 6 to enter the board.</li><li>Tap a glowing token to move.</li><li>Capture opponent tokens.</li><li>Get all 4 tokens to the finish to win!</li></ol></div>
+      <div class="luck">Good<br>Luck!<span>🎲</span></div>
+    </section>
+  </main>
+  <aside class="right">
+    <section class="card"><h2>Current Turn</h2>
+      <div class="turn"><span id="av" class="av big red"></span><div><strong id="turnName">Red Player</strong><p id="msg">Roll the dice to move!</p></div></div></section>
+    <section class="card dicecard"><div id="dice" aria-live="polite"></div><button id="rollBtn">🎲 Roll Dice</button></section>
+    <section class="card"><h2>Players</h2><div id="players"></div></section>
+  </aside>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
